@@ -22,3 +22,7 @@ Auth::routes();
 Route::get('/',[StudentController::class,'index'])->name('home');
 Route::get('/home',[StudentController::class,'index']);
 
+Route::delete('/delete/{id}',[StudentController::class,'destroy'])->name('deleteStudent');
+
+
+

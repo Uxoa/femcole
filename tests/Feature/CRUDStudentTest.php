@@ -31,4 +31,14 @@ class CRUDStudentTest extends TestCase
         
 
     }
+    public function test_aStudentCanBeDeleted(){
+        $this->withExceptionHandling();
+
+        $student = Student::factory()->create();
+        $this->assertCount(1,Student::all());
+        $response = $this->delete(route('deleteStudent',$student->id));
+        $this->assertCount(0,Student::all());
+
+
+}
 }
