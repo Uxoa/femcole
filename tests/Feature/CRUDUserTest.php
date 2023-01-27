@@ -40,7 +40,7 @@ class CRUDUserTest extends TestCase
         $this->assertCount(0,User::all());
     }
 
-    public function test_anEventCanBeCreated(){
+    public function test_anUserCanBeCreated(){
         $this->withExceptionHandling();
 
         $response = $this->post(route('storeUser'),
