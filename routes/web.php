@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +19,10 @@ use App\Http\Controllers\StudentController;
 
 Auth::routes();
 
-Route::get('/',[StudentController::class,'index'])->name('home');
-Route::get('/home',[StudentController::class,'index']);
+Route::get('/',[UserController::class,'index'])->name('home');
+Route::get('/home',[UserController::class,'index']);
 
-Route::delete('/delete/{id}',[StudentController::class,'destroy'])->name('deleteStudent');
+Route::delete('/delete/{id}',[UserController::class,'destroy'])->name('deleteUser');
 
 
 

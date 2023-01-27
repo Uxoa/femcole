@@ -2,14 +2,14 @@
 
 @section('content')
 
-    @foreach($students as $student)
-    <div> {{ $student->studentName }} </div>
-    <form class=formActionsHome action="{{ route('deleteStudent', ['id'=>$student->id]) }}" method="POST">                   
+    @foreach($users as $user)
+    <div> {{ $user->name }} </div>
+    <form class=formActionsHome action="{{ route('deleteUser', ['id'=>$user->id]) }}" method="POST">                   
         @method('delete')                
             @csrf  
             <button type="submit"
             class="bt-adm m-1 d-flex justify-content-center align-items-center"
-            onclick="return confirm('¿Estas seguro de querer eliminar este evento? {{ $student->name }} - ID {{ $student->id }}')">Eliminar
+            onclick="return confirm('¿Estas seguro de querer eliminar este evento? {{ $user->name }} - ID {{ $user->id }}')">Eliminar
             </button>
     </form>
     @endforeach

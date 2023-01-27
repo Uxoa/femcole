@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class StudentController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::get();
-       /*  var_dump($students); */
-        return view('home', compact('students'));
+        $users = User::get();
+       /*  var_dump($users); */
+        return view('home', compact('users'));
 
         
     }
@@ -84,7 +84,7 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        Student::destroy($id);
+        User::destroy($id);
         return redirect()->route('home');
     }
 }
