@@ -38,7 +38,22 @@ class CRUDUserTest extends TestCase
         $this->assertCount(1,User::all());
         $response = $this->delete(route('deleteUser',$user->id));
         $this->assertCount(0,User::all());
+    }
 
+    public function test_anEventCanBeCreated(){
+        $this->withExceptionHandling();
 
-}
+        $response = $this->post(route('storeUser'),
+        [
+            'name' => 'name',
+            'email' => 'email',
+            'password' => 'password',
+            'surname1'=> 'surname1',
+            'surname2' => 'surname2',
+            'image' => 'image',
+        ]);
+        
+        $this->assertCount(1, User::all());
+    }
+
 }

@@ -24,8 +24,19 @@ class DatabaseSeeder extends Seeder
             'email' => 'adriana@gmail.com',
             'password' => 'password',
             'image' => 'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094623-stock-illustration-female-avatar-woman.jpg',
+            'isAdmin' => false,
         ]);
         
+        User::factory()->create([
+            'name' => 'Bea',
+            'surname1' => 'De Ávila',
+            'surname2'=> 'Jiménez',
+            'email' => 'bea@gmail.com',
+            'password' => 'password',
+            'image' => 'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094623-stock-illustration-female-avatar-woman.jpg',
+            'isAdmin' => true,
+        ]);
+
         User::factory()->create();
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+    <div>
+        <button class="btn btn-primary">
+            <a href="{{ route('register') }}">
+                <div class="text-warning">REGISTER A NEW STUDENT</div>
+            </a>
+        </button>
+    </div>
 
     @foreach($users as $user)
     <div> {{ $user->name }} </div>
