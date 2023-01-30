@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             'surname2'=> 'Ruiz',
             'email' => 'adriana@gmail.com',
             'password' => 'password',
+            'password_confirmation' => 'password',
             'image' => 'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094623-stock-illustration-female-avatar-woman.jpg',
             'isAdmin' => false,
         ]);
@@ -33,6 +34,7 @@ class DatabaseSeeder extends Seeder
             'surname2'=> 'Jiménez',
             'email' => 'bea@gmail.com',
             'password' => 'password',
+            'password_confirmation' => 'password',
             'image' => 'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094623-stock-illustration-female-avatar-woman.jpg',
             'isAdmin' => true,
         ]);

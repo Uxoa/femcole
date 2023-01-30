@@ -10,10 +10,11 @@
     </div>
 
     @foreach($users as $user)
-    <div> {{ $user->name }} </div>
+    <div> <a href="{{route('showUser',$user->id)}}"> {{ $user->name }} </a> </div>
     <form class=formActionsHome action="{{ route('deleteUser', ['id'=>$user->id]) }}" method="POST">                   
         @method('delete')                
-            @csrf  
+            @csrf 
+            <a href="{{route('editUser',['id'=>$user->id])}}"> Edit </a>
             <button type="submit"
             class="bt-adm m-1 d-flex justify-content-center align-items-center"
             onclick="return confirm('¿Estas seguro de querer eliminar este evento? {{ $user->name }} - ID {{ $user->id }}')">Eliminar

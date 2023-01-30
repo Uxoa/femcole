@@ -48,12 +48,33 @@ class CRUDUserTest extends TestCase
             'name' => 'name',
             'email' => 'email',
             'password' => 'password',
+            'password_confirmation' => 'password',
             'surname1'=> 'surname1',
             'surname2' => 'surname2',
             'image' => 'image',
         ]);
         
         $this->assertCount(1, User::all());
+    }
+
+    public function test_anUserCanBeUpdated(){
+        $this->withExceptionHandling();
+        
+        $user = User::factory()->create();
+        $this->assertCount(1,User::all());
+
+        $response =$this->patch(route('updateUser', $user->id),['name'=>'New Name']);
+        $this->assertEquals('New Name', User::first()->name);
+
+    }
+
+    public function test_anUserCanBeShowed(){
+        $this->withExceptionHandling();
+        $user=User::factory()->create();
+        $this->assertCount(1,User::all());
+        $response=$this->get(route('showUser', $user->id));
+        $response->assertSee($user->name);
+        $response->assertStatus(200)->assertViewIs('showUser');
     }
 
 }
