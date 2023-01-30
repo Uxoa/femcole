@@ -40,7 +40,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    
         $user = request()->except('_token');
 
         User::create($user);
@@ -67,7 +67,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('editUser', compact('user'));
     }
 
     /**
@@ -79,7 +80,9 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user=request()-> except('_token','_method');
+        User::where('id','=',$id)->update($user);
+        return redirect()->route('home');
     }
 
     /**
