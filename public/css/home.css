@@ -1,0 +1,91 @@
+/* ___CSS BODY HOMEPAGE___ */
+.bodyApp {
+    background-color: #E7E3EF !important;
+}
+
+
+/* ___CSS TITLE___ */
+.listStudents {
+    /* background-color: #AEA0D0;
+    width: 350px;
+    height: auto;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 36px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 10px; */
+    /* Frame 9 */
+
+    position: relative;
+    width: 450px;
+    height: 90px;
+    left: 492px;
+    top: auto;
+    background: #AEA0D0;
+    border-radius: 17px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+/* ___CSS ADD BUTTON___ */
+.addStudentButton {
+    background-color: #C7B8EA !important;
+    border-color: transparent !important;
+    /* background-image: url("/public/img/add-user.png") !important;
+    width: auto;
+    height: auto; */
+}
+
+.aAddButton {
+    text-decoration: none !important;
+}
+
+.textAddButton {
+    color: white !important;
+    font-size: 15px;
+}
+
+
+/* ___CSS TABLE___ */
+.tableHead {
+    background-color: #C7B8EA;
+}
+
+.tableTrimesters {
+    background-color:#3D73B2;
+    color: white;
+}
+
+/* .tableBody {
+    background-color: #C7B8EA;
+} */
+
+/* .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #D2CAE7;
+} */
+
+.tableHome {
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+    border-color: transparent !important;
+    padding: 10px;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: #C7B8EA;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: white;
+}
