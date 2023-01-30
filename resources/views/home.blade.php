@@ -10,7 +10,7 @@
     </div>
 
     @foreach($users as $user)
-    <div> {{ $user->name }} </div>
+    <div> <a href="{{route('showUser',$user->id)}}"> {{ $user->name }} </a> </div>
     <form class=formActionsHome action="{{ route('deleteUser', ['id'=>$user->id]) }}" method="POST">                   
         @method('delete')                
             @csrf 
