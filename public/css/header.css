@@ -1,9 +1,10 @@
 header{
         display: flex;
-        height: 70px;
+        height: 100px;
         width: 100;
         background-color: #AEA0D0;
-        padding: 30px;
+        padding: 70px;
+        justify-content: space-between; 
     }
     .log {
         display: flex;
@@ -13,3 +14,6 @@ header{
         height: 50px;
         margin-right: 10px  ;
     }
+    /* .nav-item{
+        background-color: yellow;
+    } */
