@@ -2,7 +2,7 @@
     <div class="log">
         <img src="https://res.cloudinary.com/dog5ljnve/image/upload/v1675023061/logoFemCole_q4mump.png">
     </div>
-    <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container">
                 <div class="container mx-auto">
                     </div>
@@ -14,20 +14,19 @@
                     </button> 
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                         Left Side Of Navbar -->
-                        <!-- <ul class="navbar-nav me-auto">
+                         <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav me-auto">
 
-                        </ul> -->
-
+                        </ul>
                         <!-- Right Side Of Navbar -->
-                        <!-- <ul class="navbar-nav ms-auto"> -->
+                        <ul class="navbar-nav ms-auto">
                             <!-- Authentication Links -->
-                            <!-- @guest
+                            @guest
                                 @if (Route::has('login'))
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
-                                @endif -->
+                                @endif
 
                                 <!-- @if (Route::has('register'))
                                     <li class="nav-item">
