@@ -12,8 +12,14 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function redirectUsers(){
+        //si eres profesor, llamas al index; si eres alumno, llamas al show
+    }
+
     public function index()
     {
+        
         $users = User::get();
        /*  var_dump($users); */
         return view('home', compact('users'));

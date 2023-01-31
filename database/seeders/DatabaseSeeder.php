@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         
-        User::factory()->create([
+        /* User::factory()->create([
             'name' => 'Adriana',
             'surname1' => 'Aguilar',
             'surname2'=> 'Ruiz',
@@ -37,9 +37,12 @@ class DatabaseSeeder extends Seeder
             'password_confirmation' => 'password',
             'image' => 'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094623-stock-illustration-female-avatar-woman.jpg',
             'isAdmin' => true,
-        ]);
+        ]); */
 
-        User::factory()->create();
+        User::factory()->create(['name' => 'admin', 'email' => 'admin@admin.com', 'isAdmin' => true]);
+        User::factory()->create(['name' => 'user1', 'email' => 'user1@user1.com', 'isAdmin' => false]);
+
+        User::factory(3)->create();
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',

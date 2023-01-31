@@ -22,8 +22,9 @@ Auth::routes();
 Route::redirect('/', 'login');
 
 //R del CRUD
-Route::get('/',[UserController::class,'index'])->name('home')->middleware('isadmin', 'auth');
-Route::get('/home',[UserController::class,'index'])->middleware('isadmin', 'auth');
+/* Route::get('/',[UserController::class,'index'])->name('home')->middleware('auth'); */
+
+Route::get('/home',[UserController::class,'redirectUsers'])->middleware('auth');
 
 //D del CRUD
 Route::delete('/delete/{id}',[UserController::class,'destroy'])->name('deleteUser')->middleware('isadmin', 'auth');
