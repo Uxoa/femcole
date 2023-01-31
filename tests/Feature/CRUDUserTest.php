@@ -24,6 +24,15 @@ class CRUDUserTest extends TestCase
         $users = User::factory(2)->create();
         $user = $users[0];
 
+        $userNoAdmin = User::factory()->create(['isAdmin'=>false]);
+        $this->actingAs($userNoAdmin);
+        $response=$this->get(route('showUser', $user->id));
+        $response -> assertSee($user->name);
+        $response ->assertStatus(200)
+                ->assertViewIs('showUser');
+
+        $userAdmin = User::factory()->create(['isAdmin'=>true]);
+        $this->actingAs($userAdmin);
         $response = $this->get('/');
         $response -> assertSee($user->name);
         $response ->assertStatus(200)
@@ -39,12 +48,12 @@ class CRUDUserTest extends TestCase
         $userNoAdmin = User::factory()->create(['isAdmin'=>false]);
         $this->actingAs($userNoAdmin);
         $response = $this->delete(route('deleteUser',$user->id));
-        $this->assertCount(1,User::all());
+        $this->assertCount(2,User::all());
 
         $userAdmin = User::factory()->create(['isAdmin'=>true]);
         $this->actingAs($userAdmin);
         $response = $this->delete(route('deleteUser',$user->id));
-        $this->assertCount(0,User::all());
+        $this->assertCount(2,User::all());
     }
 
     public function test_anUserCanBeCreatedByAdmin(){
@@ -63,7 +72,7 @@ class CRUDUserTest extends TestCase
             'image' => 'image',
         ]);
         
-        $this->assertCount(1, User::all());
+        $this->assertCount(2, User::all());
 
         $userNoAdmin = User::factory()->create(['isAdmin'=>false]);
         $this->actingAs($userNoAdmin);
@@ -78,18 +87,24 @@ class CRUDUserTest extends TestCase
             'image' => 'image',
         ]);
         
-        $this->assertCount(1, User::all());
+        $this->assertCount(3, User::all());
     }
 
-    public function test_anUserCanBeUpdated(){
+    public function test_anUserCanBeUpdatedByAdmin(){
         $this->withExceptionHandling();
         
         $user = User::factory()->create();
         $this->assertCount(1,User::all());
 
-        $response =$this->patch(route('updateUser', $user->id),['name'=>'New Name']);
+        $userAdmin = User::factory()->create(['isAdmin' => true]);
+        $this->actingAs($userAdmin);
+        $response = $this->patch(route('updateUser', $user->id), ['name' => 'New Name']);
         $this->assertEquals('New Name', User::first()->name);
 
+        $userNoAdmin = User::factory()->create(['isAdmin' => false]);
+        $this->actingAs($userNoAdmin);
+        $response = $this->patch(route('updateUser', $user->id), ['name' => 'New Name if no Admin']);
+        $this->assertEquals('New Name', User::first()->name);
     }
 
     public function test_anUserCanBeShowed(){
@@ -100,5 +115,4 @@ class CRUDUserTest extends TestCase
         $response->assertSee($user->name);
         $response->assertStatus(200)->assertViewIs('showUser');
     }
-
 }
