@@ -3,22 +3,26 @@
     background-color: #E7E3EF !important;
 }
 
+/* ___CSS HOME DISTRIBUTION___ */
+.homeContainer {
+    display: flex;
+}
+
+.buttonCotainer {
+    margin: 10px;
+    position: relative;
+    top: 50px;
+}
+
+.tableContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 /* ___CSS TITLE___ */
 .listStudents {
-    /* background-color: #AEA0D0;
-    width: 350px;
-    height: auto;
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 36px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin: 10px; */
-    /* Frame 9 */
-
-    position: relative;
+    /* position: relative; */
     width: 450px;
     height: 90px;
     left: 492px;
@@ -32,17 +36,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
-
+    margin-bottom: 40px;
 }
 
 /* ___CSS ADD BUTTON___ */
 .addStudentButton {
     background-color: #C7B8EA !important;
     border-color: transparent !important;
-    /* background-image: url("/public/img/add-user.png") !important;
     width: auto;
-    height: auto; */
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url("../img/add-user.png");
+    background-position: top;
 }
 
 .aAddButton {
@@ -52,6 +57,9 @@
 .textAddButton {
     color: white !important;
     font-size: 15px;
+    position: relative;
+    /* top: 10px; */
+    margin-top: 30px;
 }
 
 
