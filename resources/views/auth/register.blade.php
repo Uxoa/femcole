@@ -81,7 +81,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4  colFormLabel ">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4  colFormLabel">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-7">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -96,10 +96,10 @@
                             </div>
                         </div>
 
-                        <div class="row mb-2">
-                            <div class="col-md-7 offset-md-4">
+                        <div class="row mb-3">
+                            <div class="btnBox">
                                 <a href="#"> 
-                                    <button type="submit" class="btnRegister">
+                                    <button type="submit" class="btnRegister" >
                                         {{ __('Register') }}
                                     </button>
                                 </a>
