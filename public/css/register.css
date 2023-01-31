@@ -56,13 +56,16 @@ form{
     
 
 }
-input, button {font-family: 'Montserrat';}
+input, button {
+    font-family: 'Montserrat'!important; 
+    font-size:13px;
+}
 
 input[type=text] {
     width:100%;
     background: #ffffff;
     border-radius: 13px;
-    padding:10px 0px 10px 0px;
+    padding:10px 0px 10px 5px;
     color:#000000;
     border:0;
 
@@ -72,39 +75,61 @@ input[type=email] {
     width:100%;
     background: #ffffff;
     border-radius: 13px;
-    padding:10px 0px 10px 0px;
+    padding:10px 0px 10px 5px;
     color:#000000;
     border:0;
 
 }
 
-input[type=password] {
+a.input[type=password] {
     width:100%;
     background: #ffffff;
     border-radius: 13px;
-    padding:10px 0px 10px 0px;
+    padding:10px 0px 10px 5px;
     color:#000000;
     border:0;
 
 }
 
-button[type=submit].btnRegister{
-    width:180px;
-    border-radius: 17px;
+
+
+a button[type=submit].btnRegister{
+    width:130px;
+    border-radius: 13px;
     color:#ffffff;
     border:0;
     background: #AEA0D0;
-    padding:10px;
+    padding:10px 0px 10px 5px;
     font-size:13px;
+    background-image: url("../img/plusIcon.png");
+    background-repeat: no-repeat;
+    background-position:left;
+    background-position-x: 13px;;
+    background-size: 25px;
+
 }
 
-button[type=submit].btnCancel{
-    width:180px;
-    border-radius: 17px;
+
+
+a button[type=reset].btnCancel{
+    width:130px;
+    border-radius: 13px;
     color:#ffffff;
     border:0;
     background: #FF9C64;
-    padding:10px;
     font-size:13px;
+    padding:10px 0px 10px 5px;
+    background-image: url("../img/backIcon.png");
+    background-repeat: no-repeat;
+    background-position:left;
+    background-position-x: 20px;;
+    background-size: 25px;
+
 }
 
+.form-control:focus {
+    color: #212529;
+    background-color: #f8fafc;
+    outline: 0;
+    box-shadow: 0 0 0 0.05rem #AEA0D0!important;
+}

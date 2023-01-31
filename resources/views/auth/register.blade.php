@@ -98,13 +98,17 @@
 
                         <div class="row mb-2">
                             <div class="col-md-7 offset-md-4">
-                                <button type="submit" class="btnRegister">
-                                    {{ __('Register') }}
-                                </button>
+                                <a href="#"> 
+                                    <button type="submit" class="btnRegister">
+                                        {{ __('Register') }}
+                                    </button>
+                                </a>
 
-                                <button type="submit" class="btnCancel">
-                                    {{ __('Cancel') }}
-                                </button>
+                                <a href="{{ route('home') }}"> 
+                                    <button type="reset" class="btnCancel">
+                                        {{ __('Cancel') }}
+                                    </button>
+                                </a>
 
                             </div>
                         </div>
