@@ -19,12 +19,13 @@ use App\Http\Controllers\UserController;
 
 Auth::routes();
 
-//Route::redirect('/', 'login');
+Route::redirect('/', 'login');
 
 //R del CRUD
-Route::get('/',[UserController::class,'index'])->name('home')->middleware('auth'); 
-
+/* Route::get('/',[UserController::class,'index'])->name('home')->middleware('auth'); 
+ */
 Route::get('/home',[UserController::class,'redirectUsers'])->middleware('auth');
+Route::get('/homeTeacher',[UserController::class,'index'])->name('home')->middleware('auth');
 
 //D del CRUD
 Route::delete('/delete/{id}',[UserController::class,'destroy'])->name('deleteUser')->middleware('isadmin', 'auth');

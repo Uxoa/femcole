@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    @if (Auth::check() && Auth::user()->isAdmin)
-        <div>
+{{--     @if (Auth::check() && Auth::user()->isAdmin)
+ --}}        <div>
             <button class="btn btn-primary">
                 <a href="{{ route('register') }}">
                     <div class="text-warning">REGISTER A NEW STUDENT</div>
@@ -22,5 +22,5 @@
                 </button>
         </form>
         @endforeach
-    @endif
+   {{-- @endif--}}
 @endsection
