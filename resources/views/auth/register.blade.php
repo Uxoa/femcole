@@ -97,13 +97,13 @@
 
                         <div class="row mb-3">
                             <div class="btnBox">
-                                <a href="#"> 
+                                <a href="#">
                                     <button type="submit" class="btnRegister" >
                                         {{ __('Register') }}
                                     </button>
                                 </a>
 
-                                <a href="{{ route('home') }}"> 
+                                <a href="{{ route('home') }}">
                                     <button type="reset" class="btnCancel">
                                         {{ __('Cancel') }}
                                     </button>
