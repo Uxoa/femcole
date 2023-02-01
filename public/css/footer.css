@@ -4,7 +4,22 @@ footer{
     width: 100;
     background-color: #AEA0D0;
     padding: 30px;
+    justify-content: space-between;
     }
-small{
-        font-size: 15px;
+
+.social a{
+        display: inline-block;
+        text-decoration: none;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: antiquewhite;
+        margin-right: 10px;
+        background-color: indigo;
+        text-align:  center;
+        transition: all 300ms ease;
     }
+.copy{
+    padding: 15px 10px;
+    text-align: center;
+}
