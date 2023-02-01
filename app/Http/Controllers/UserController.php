@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Middleware\IsAdmin;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -15,6 +17,12 @@ class UserController extends Controller
 
     public function redirectUsers(){
         //si eres profesor, llamas al index; si eres alumno, llamas al show
+        if ($user = 'isAdmin'){
+            return redirect()->route('home');
+        }
+        if ($user != 'isAdmin'){
+        return redirect()->route('/show/{id}');
+        }
     }
 
     public function index()
