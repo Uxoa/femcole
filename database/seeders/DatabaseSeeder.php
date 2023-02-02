@@ -45,10 +45,12 @@ class DatabaseSeeder extends Seeder
 
         User::factory(3)->create();
 
-        Grade::factory()->create();
+        Grade::factory()
+            ->has(User::factory()->count(2))
+            ->create();
 
         Grade::factory()->create([
-            'user_id'=> 'Paloma',
+            /* 'user_id'=> 'Paloma', */
             'grade'=> '10',
             'trimester' => '1T',
             'subject' => 'Inglés',

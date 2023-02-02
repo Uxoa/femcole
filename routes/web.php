@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GradeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ use App\Http\Controllers\UserController;
 Auth::routes();
 
 Route::redirect('/', 'login');
+
+// ___CRUD USERS___
 
 //R del CRUD
 /* Route::get('/',[UserController::class,'index'])->name('home')->middleware('auth'); 
@@ -41,5 +44,10 @@ Route::patch('/user/{id}',[UserController::class,'update'])->name('updateUser')-
 //S del Show
 Route::get('/show/{id}',[UserController::class,'show'])->name('showUser');
 
+
+// ___CRUD GRADES___
+
+//R del CRUD
+Route::get('/homeTeacher',[GradeController::class,'index'])->name('home')->middleware('auth');
 
 

@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
 
-            $table->string('user_id', 50);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('grade');
-            $table->string('trimester', 5);
-            $table->string('subject', 50);
+            $table->string('trimester');
+            $table->string('subject');
             $table->integer('exam');
-            $table->string('schoolYear', 50);
+            $table->string('schoolYear');
 
             $table->timestamps();
         });
