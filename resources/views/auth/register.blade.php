@@ -55,7 +55,7 @@
                             <label for="email" class="col-md-4  colFormLabel ">{{ __('Email Address') }}</label>
 
                             <div class="col-md-7">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email"autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -95,8 +95,8 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <div class="btnBox">
+                        <div class="btnBox">
+                            
                                 <a href="#">
                                     <button type="submit" class="btnRegister" >
                                         {{ __('Register') }}
@@ -108,13 +108,12 @@
                                         {{ __('Cancel') }}
                                     </button>
                                 </a> -->
-
-                                <button type="reset" class="btnCancel">
-                                    <a href="{{ route ('home') }}">Cancel</a>
-                                </button>
-
-
-                            </div>
+                                <a href="{{ route ('home') }}">
+                                    <button type="reset" class="btnCancel">
+                                    Cancel
+                                    </button>
+                                </a>
+                            
                         </div>
                     </form>
 

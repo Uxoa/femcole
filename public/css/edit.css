@@ -1,6 +1,4 @@
 
-
-
 .container{
     background: #E7E3EF;
     padding-top:30px;
@@ -40,7 +38,7 @@ form{
 .cardBody{
     background: #E7E3EF;
     border:0;
-
+ 
 }
 
 .colFormLabel{
@@ -89,31 +87,30 @@ a.input[type=password] {
     border:0;
 
 }
-
+/*
 .btnBox{
 display:flex;
 flex-direction: row;
 justify-content: center;
 
-}
+}*/
 
-a button[type=submit].btnRegister{
+a button[type=submit].btnSave{
     width:130px;
     border-radius: 13px;
     color:#ffffff;
     border:0;
     background: #AEA0D0;
     padding:10px 0px 10px 5px;
-
+    margin:10% 0 0 90%;
     font-size:13px;
-    background-image: url("../img/plusIcon.png");
     background-repeat: no-repeat;
     background-position:left;
     background-position-x: 13px;;
     background-size: 25px;
 
 }
-a button[type=submit].btnRegister:hover{
+a button[type=submit].btnSave:hover{
     background: #6b2ff8;
     background-image: url("../img/plusIcon.png");
     background-repeat: no-repeat;
@@ -123,7 +120,7 @@ a button[type=submit].btnRegister:hover{
 }
 
 
-a button[type=submit].btnLogin{
+/*a button[type=submit].btnLogin{
     width:130px;
     border-radius: 13px;
     color:#ffffff;
@@ -138,7 +135,7 @@ a button[type=submit].btnLogin:hover{
 }
 
 
-a.btnForgot{
+/*a.btnForgot{
     width:150px;
     border-radius: 13px;
     color:#ffffff;
@@ -179,16 +176,10 @@ a button[type=reset].btnCancel:hover{
     background-position-x: 20px;;
     background-size: 25px;
 }
-
+*/
 .form-control:focus {
     color: #212529;
     background-color: #f8fafc;
     outline: 0;
-    box-shadow: 0 0 0 0.15rem #AEA0D0!important;
-
-}
-#password, #password-confirm{
-    padding: 10px 0px 10px 5px;
-    border-radius: 13px;
-    
+   /* box-shadow: 0 0 0 0.10rem #AEA0D0!important;*/
 }
