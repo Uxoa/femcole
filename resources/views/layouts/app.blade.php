@@ -12,11 +12,19 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+<<<<<<< HEAD
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 
+=======
+    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+>>>>>>> dev
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 </head>
+<<<<<<< HEAD
 <body class="bodyApp">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -73,9 +81,14 @@
             </div>
         </nav>
 
+=======
+<body>
+    <x-header> </x-header>
+>>>>>>> dev
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+    <x-footer> </x-footer>
 </body>
 </html>
