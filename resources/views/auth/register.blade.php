@@ -97,7 +97,7 @@
 
                         <div class="row mb-3">
                             <div class="btnBox">
-                                <a href="#">
+                                <a href="{{ route('createUser') }}">
                                     <button type="submit" class="btnRegister" >
                                         {{ __('Register') }}
                                     </button>
