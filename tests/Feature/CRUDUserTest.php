@@ -33,7 +33,7 @@ class CRUDUserTest extends TestCase
 
         $userAdmin = User::factory()->create(['isAdmin'=>true]);
         $this->actingAs($userAdmin);
-        $response = $this->get('/');
+        $response = $this->get('/homeTeacher');
         $response -> assertSee($user->name);
         $response ->assertStatus(200)
                 ->assertViewIs('home');
