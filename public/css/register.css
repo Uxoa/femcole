@@ -160,7 +160,7 @@ a button[type=reset].btnCancel{
     border-radius: 13px;
     color:#ffffff;
     border:0;
-    background: #FF9C64;
+    background: #FF9C64!important;
     font-size:13px;
     padding:10px 0px 10px 5px;
     margin:0 0 0 100%;
