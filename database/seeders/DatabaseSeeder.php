@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Grade;
 
 class DatabaseSeeder extends Seeder
 {
@@ -43,6 +44,17 @@ class DatabaseSeeder extends Seeder
         User::factory()->create(['name' => 'user1', 'email' => 'user1@user1.com', 'isAdmin' => false]);
 
         User::factory(3)->create();
+
+        Grade::factory()->create();
+
+        Grade::factory()->create([
+            'user_id'=> 'Paloma',
+            'grade'=> '10',
+            'trimester' => '1T',
+            'subject' => 'Inglés',
+            'exam' => '1',
+            'schoolYear' => '2023',
+        ]);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
