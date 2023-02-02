@@ -1,4 +1,3 @@
-
 .container{
     background: #E7E3EF;
     padding-top:30px;
@@ -87,13 +86,6 @@ a.input[type=password] {
     border:0;
 
 }
-/*
-.btnBox{
-display:flex;
-flex-direction: row;
-justify-content: center;
-
-}*/
 
 a button[type=submit].btnSave{
     width:130px;
@@ -111,7 +103,7 @@ a button[type=submit].btnSave{
 
 }
 a button[type=submit].btnSave:hover{
-    background: #6b2ff8;
+    background: #4311B9;
     background-image: url("../img/plusIcon.png");
     background-repeat: no-repeat;
     background-position:left;
@@ -119,6 +111,12 @@ a button[type=submit].btnSave:hover{
     background-size: 25px;
 }
 
+.form-control:focus {
+    color: #212529;
+    background-color: #f8fafc;
+    outline: 0;
+   /* box-shadow: 0 0 0 0.10rem #AEA0D0!important;*/
+}
 
 /*a button[type=submit].btnLogin{
     width:130px;
@@ -177,9 +175,4 @@ a button[type=reset].btnCancel:hover{
     background-size: 25px;
 }
 */
-.form-control:focus {
-    color: #212529;
-    background-color: #f8fafc;
-    outline: 0;
-   /* box-shadow: 0 0 0 0.10rem #AEA0D0!important;*/
-}
+

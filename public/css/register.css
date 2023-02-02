@@ -114,7 +114,7 @@ a button[type=submit].btnRegister{
 
 }
 a button[type=submit].btnRegister:hover{
-    background: #6b2ff8;
+    background: #4311B9;
     background-image: url("../img/plusIcon.png");
     background-repeat: no-repeat;
     background-position:left;
@@ -133,7 +133,7 @@ a button[type=submit].btnLogin{
     font-size:13px;
 }
 a button[type=submit].btnLogin:hover{
-    background: #6b2ff8;
+    background: #4311B9;
 
 }
 
@@ -149,7 +149,7 @@ a.btnForgot{
     text-decoration:none;
 }
 a.btnForgot:hover{
-    background: #6b2ff8;
+    background: #4311B9;
     color:#ffffff;
 
 }
