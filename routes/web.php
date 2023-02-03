@@ -41,5 +41,3 @@ Route::patch('/user/{id}',[UserController::class,'update'])->name('updateUser')-
 //S del Show
 Route::get('/show/{id}',[UserController::class,'show'])->name('showUser');
 
-
-
