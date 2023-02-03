@@ -1,5 +1,5 @@
 
-<p align="center" style="background-color:blue;"><img width="231" alt="FemCole logo" src="https://raw.githubusercontent.com/Uxoa/femcole/tableHomeCalls/public/img/logoFemCole.png"></p>
+<p align="center"><img width="231" alt="FemCole logo" src="https://res.cloudinary.com/dog5ljnve/image/upload/v1675023061/logoFemCole_q4mump.png"></p>
 <h2> FemCole (XXX XXX  Project)</h2>
 <h4>Management school system with Laravel 9</h4>
 
