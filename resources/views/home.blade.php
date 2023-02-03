@@ -22,7 +22,7 @@
                         <td colspan="4">Historia</td>
                         <td colspan="4">Geografía</td>
                     </tr>
-                    <tr class="tableTrimesters">
+                    <tr class="tableTrimesters"> 
                         <td>1T</td>
                         <td>2T</td>
                         <td>3T</td>
