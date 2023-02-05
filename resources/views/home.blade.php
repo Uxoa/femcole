@@ -3,11 +3,11 @@
 @section('content')
     <div class="homeContainer">
         <div class="buttonCotainer">
-            <button class="addStudentButton btn btn-primary">
                 <a class="aAddButton" href="{{ route('register') }}">
-                    <div class="textAddButton">AÑADIR ALUMNO</div>
+                    <button class="addStudentButton btn btn-primary">
+                        <div class="textAddButton">AÑADIR ALUMNO</div>
+                    </button>
                 </a>
-            </button>
         </div>
 
         <div class="tableContainer">
