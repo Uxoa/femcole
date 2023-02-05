@@ -48,6 +48,9 @@ Route::get('/show/{id}',[UserController::class,'show'])->name('showUser');
 // ___CRUD GRADES___
 
 //R del CRUD
-Route::get('/homeTeacher',[GradeController::class,'index'])->name('home')->middleware('auth');
+Route::get('/homeTeacher',[GradeController::class,'index'])->name('home');
+
+//D del CRUD
+Route::delete('/delete/{id}',[GradeController::class,'destroy'])->name('deleteGrade');
 
 

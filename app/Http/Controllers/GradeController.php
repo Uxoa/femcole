@@ -85,5 +85,7 @@ class GradeController extends Controller
     public function destroy($id)
     {
         //
+        Grade::destroy($id);
+        return redirect()->route('home');
     }
 }
