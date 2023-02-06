@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
 
 <div class="studentCard">
         <div>
@@ -16,7 +15,7 @@
     
 <div class="allT">
     
-    <div>
+    <div class="table">
         <table class="firstT box tableHome table-striped text-center">
             
             <thead class="tableHead">
@@ -73,7 +72,7 @@
             </tbody>
         </div>
 
-        <div>
+        <div class="table">
             <table class="secondT box tableHome table-striped text-center">
                 <thead class="tableHead">
                     <tr>
@@ -125,7 +124,7 @@
                     </tr>
                 </tbody>
         </div>
-        <div>
+        <div class="table">
             <table class="thirdT box tableHome table-striped text-center">
                 
                 <thead class="tableHead">
@@ -179,7 +178,7 @@
                     </tr>
                 </tbody>
         </div>
-        <div>
+        <div class="table">
             <table class="finalEvaluation box tableHome table-striped text-center">
                 
                 <thead class="tableHead">
@@ -207,32 +206,32 @@
         </div>
 
     @if(Auth::check() && Auth::user()->isAdmin)
- 
-        <div class="editButton" id="main-conteiner">
+
+            <div class="editButton" id="main-conteiner">
+                
+                <a href="{{ route('editUser', ['id' => $user->id]) }}" class="btnB btn-purpleB editButton">Edit</a>
+                
+                <form action="{{ route('deleteUser', ['id'=>$user->id]) }}" method="POST" >
+                    @method('delete')                
+                    @csrf 
+                    <button type="submit" class="btnD btn-purpleD deleteB"
+                            onclick="return confirm('¿Estas seguro de querer eliminar este evento? {{ $user->name }} - ID {{ $user->id }}')">Eliminar
+                    </button>
+                </form>
+                
+                <a href="{{route ('home') }}" class="btnA btn-purpleA backHome">Back</a>
             
-            <a href="{{ route('editUser', ['id' => $user->id]) }}" class="btnB btn-purpleB editButton">Edit</a>
-            
-            <form action="{{ route('deleteUser', ['id'=>$user->id]) }}" method="POST" >
-                @method('delete')                
-                @csrf 
-                <button type="submit" class="btnD btn-purpleD deleteB"
-                        onclick="return confirm('¿Estas seguro de querer eliminar este evento? {{ $user->name }} - ID {{ $user->id }}')">Eliminar
-                </button>
-            </form>
-            
-            <a href="{{route ('home') }}" class="btnA btn-purpleA backHome">Back</a>
-        
-        </div>   
+            </div>   
     
     
-    <!-- <div class=" editButton buttom">
+            <div class=" editButton buttom">
                 <button type="button"><a class="bt-adm m-1 d-flex justify-content-center align-items-center" 
                 href="{{ route('editUser', ['id' => $user->id]) }}">Edit</a>
                 </button>
-        </div> -->
+            </div> 
     @endif
 
-    <!-- @if(Auth::check() && Auth::user()->isAdmin)
+     @if(Auth::check() && Auth::user()->isAdmin)
             <div class="deleteB buttom">
                 <form class=formActionsHome action="{{ route('deleteUser', ['id'=>$user->id]) }}" method="POST">                   
                     @method('delete')                
@@ -247,7 +246,7 @@
             <div class="backHome buttom">  
                 <button type="button"><a href="{{route ('home') }}" >Back to home</a></button>
             </div> 
-        @endif -->
+        @endif 
 </div>    
-</div>    
+
 @endsection
