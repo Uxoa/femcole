@@ -52,7 +52,7 @@
                 <tbody class="tableBody">
                     @foreach($users as $user)
                     <tr>
-                        <td><div> <a href="{{route('showUser',$user->id)}}"> {{ $user->name }} </a> </div></td>
+                        <td><div> <a href="{{route('showUser',$user->id)}}"> {{ $user->name }} {{ $user->surname1 }} {{ $user->surname2 }}</a> </div></td>
                         <td>1</td>
                         <td>2</td>
                         <td>3</td>

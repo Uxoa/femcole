@@ -2,36 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class UserController extends Controller
+class GradeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function redirectUsers(){
-        //si eres profesor, llamas al index; si eres alumno, llamas al show
-        $user = Auth::User();
-        if ($user->isAdmin){
-            return redirect()->route('home');  
-        }
-        if (!$user->isAdmin){
-            return redirect()->route('showUser',$user->id);  
-        }   
-    }
-
     public function index()
     {
-        
-        $users = User::where('isAdmin','=', false)->get();
-        return view('home', compact('users'));
-
-        
+        //
     }
 
     /**
@@ -42,7 +24,6 @@ class UserController extends Controller
     public function create()
     {
         //
-        return view ('createUser');
     }
 
     /**
@@ -53,12 +34,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-    
-        $user = request()->except('_token');
-
-        User::create($user);
-
-        return redirect()->route('home');
+        //
     }
 
     /**
@@ -69,9 +45,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
-
-        return view('showUser',compact('user'));
+        //
     }
 
     /**
@@ -82,8 +56,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        return view('editUser', compact('user'));
+        //
     }
 
     /**
@@ -95,9 +68,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user=request()-> except('_token','_method');
-        User::where('id','=',$id)->update($user);
-        return redirect()->route('home');
+        //
     }
 
     /**
@@ -108,7 +79,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::destroy($id);
-        return redirect()->route('home');
+        //
     }
 }
