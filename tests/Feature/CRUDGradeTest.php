@@ -34,10 +34,10 @@ class CRUDGradeTest extends TestCase
     public function test_aGradeCanBeDeletedByAdmin(){
         $this->withExceptionHandling();
 
-        $grade = Grade::factory()->create();
+        $grade = Grade::factory()->create(['user_id'=>3, 'grade'=>7, 'trimester'=>2, 'subject'=>'Historia', 'exam'=>3, 'schoolYear'=>2023]);
         $this->assertCount(1, Grade::all());
 
-        $response = $this->delete(route('deleteGrade', $grade->id));
+        $response = $this->delete(route('deleteGrade', $grade->user_id));
         $this->assertCount(0, Grade::all());
     }
 }

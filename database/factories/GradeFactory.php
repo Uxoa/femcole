@@ -18,7 +18,7 @@ class GradeFactory extends Factory
     {
         return [
             //
-            'user_id' => $this->faker->name(),
+            'user_id' => $this->faker->randomFloat($nbMaxDecimals = 0, $min = 1, $max = 5),
             'grade' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 10),
             'trimester' => $this->faker->biasedNumberBetween($min = 1, $max= 3, $function = 'sqrt'),
             'subject' => $this->faker->company(),

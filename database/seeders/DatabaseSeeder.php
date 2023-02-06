@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'password' => 'password',
             'password_confirmation' => 'password',
             'image' => 'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094623-stock-illustration-female-avatar-woman.jpg',
-                'isAdmin' => false,
+            'isAdmin' => false,
         ]);
 
         Grade::factory()->create([
