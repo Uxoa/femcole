@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    
+<div class="container">
+
 <div class="studentCard">
         <div>
             <img src="{{$user->image}}" alt="adriana" class="imageStudent">
@@ -70,7 +71,7 @@
                     <td></td>
                 </tr>
             </tbody>
-    </div>
+        </div>
 
         <div>
             <table class="secondT box tableHome table-striped text-center">
@@ -247,5 +248,6 @@
                 <button type="button"><a href="{{route ('home') }}" >Back to home</a></button>
             </div> 
         @endif -->
+</div>    
 </div>    
 @endsection
