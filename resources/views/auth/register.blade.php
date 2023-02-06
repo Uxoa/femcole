@@ -103,11 +103,16 @@
                                     </button>
                                 </a>
 
-                                <a href="{{ route('home') }}">
+                                <!-- <a href="{{ route ('home') }}">
                                     <button type="reset" class="btnCancel">
                                         {{ __('Cancel') }}
                                     </button>
-                                </a>
+                                </a> -->
+
+                                <button type="reset" class="btnCancel">
+                                    <a href="{{ route ('home') }}">Cancel</a>
+                                </button>
+
 
                             </div>
                         </div>

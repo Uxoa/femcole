@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -12,8 +13,21 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function redirectUsers(){
+        //si eres profesor, llamas al index; si eres alumno, llamas al show
+        $user = Auth::User();
+        if ($user->isAdmin){
+            return redirect()->route('home');  
+        }
+        if (!$user->isAdmin){
+            return redirect()->route('showUser',$user->id);  
+        }   
+    }
+
     public function index()
     {
+        
         $users = User::get();
        /*  var_dump($users); */
         return view('home', compact('users'));

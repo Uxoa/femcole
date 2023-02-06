@@ -19,18 +19,24 @@ use App\Http\Controllers\UserController;
 
 Auth::routes();
 
-Route::get('/',[UserController::class,'index'])->name('home');
-Route::get('/home',[UserController::class,'index']);
+Route::redirect('/', 'login');
 
-Route::delete('/delete/{id}',[UserController::class,'destroy'])->name('deleteUser');
+//R del CRUD
+/* Route::get('/',[UserController::class,'index'])->name('home')->middleware('auth'); 
+ */
+Route::get('/home',[UserController::class,'redirectUsers'])->middleware('auth');
+Route::get('/homeTeacher',[UserController::class,'index'])->name('home')->middleware('auth');
+
+//D del CRUD
+Route::delete('/delete/{id}',[UserController::class,'destroy'])->name('deleteUser')->middleware('isadmin', 'auth');
 
 //C del CRUD
-Route::get('/create', [UserController::class, 'create'])->name('createUser');
-Route::post('/', [UserController::class, 'store'])->name('storeUser');
+Route::get('/create', [UserController::class, 'create'])->name('createUser')->middleware('isadmin', 'auth');
+Route::post('/', [UserController::class, 'store'])->name('storeUser')->middleware('isadmin', 'auth');
 
 //U del CRUD
-Route::get('/edit/{id}',[UserController::class, 'edit'])->name('editUser');
-Route::patch('/user/{id}',[UserController::class,'update'])->name('updateUser');
+Route::get('/edit/{id}',[UserController::class, 'edit'])->name('editUser')->middleware('isadmin', 'auth');
+Route::patch('/user/{id}',[UserController::class,'update'])->name('updateUser')->middleware('isadmin', 'auth');
 
 //S del Show
 Route::get('/show/{id}',[UserController::class,'show'])->name('showUser');
