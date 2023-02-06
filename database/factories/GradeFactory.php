@@ -24,8 +24,9 @@ class GradeFactory extends Factory
             /* 'user_id' => function(){
                 return factory(\App\User::class)->create()->id;
             }, */
-            'user_id' => User::where('isAdmin','=', false)->random()->id,
+            /* 'user_id' => User::where('isAdmin','=', false)->random()->id, */
             /* 'user_id' => $this->faker->randomElement([User::class])->pluck('id'), */
+            'user_id' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 5),
             /* 'user_id' => User::inRandomOrder()->first()->id, */
             'grade' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 10),
             'trimester' => $this->faker->biasedNumberBetween($min = 1, $max= 4, $function = 'sqrt'),
