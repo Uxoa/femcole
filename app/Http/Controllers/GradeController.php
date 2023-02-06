@@ -16,9 +16,10 @@ class GradeController extends Controller
     public function index()
     {
         //
+        $users = User::get();
         $grades = Grade::get();
         //var_dump($grades);
-        return view('home', compact('grades'));
+        return view('home', compact('users', 'grades'));
     }
 
     /**
