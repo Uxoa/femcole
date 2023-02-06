@@ -24,10 +24,11 @@
 
 <body>
     <x-header> </x-header>
+    
         <main class="py-4">
             @yield('content')
         </main>
-    </div>
-    <x-footer> </x-footer>
+
+<x-footer> </x-footer>
 </body>
 </html>

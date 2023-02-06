@@ -3,15 +3,22 @@
 .studentCard{
     display: flex;
     flex-direction:row;
-    justify-content: center;
-    align-items: stretch;
-    align-items: center;
-    border:2px solid red;
+    justify-content: flex-start;
+    align-items: left;
+    
 }
 
-.infoStudent{
+
+
+.infoStudent p{
+    margin:0px;
+    line-height: 25px;;
+    font-size:17px;
     margin-left: 20px;
     font-weight: 900;
+    position:relative;
+    top:20px;
+    
 }
 
 .imageStudent{
@@ -31,29 +38,10 @@
     position: relative;
 }
 
-.secondT{
-    position: absolute;
-    top: 1px;
-    bottom: 0;
-    right: 0;
-    left: 500px;
-}
 
-.thirdT{
-    position: absolute;
-    top: 1px;
-    bottom: 0;
-    right: 0;
-    left: 1000px;
-}
 
-.finalEvaluation{
-    position: absolute;
-    top: 230px;
-    bottom: 0;
-    right: 0;
-    left: 500px;
-}
+
+
 
 .tableNotes{
     background-color:#3D73B2;
@@ -68,13 +56,7 @@
     padding: 15px;
 }
 
-.editButton{
-    position: absolute;
-    top: 125px;
-    bottom: 200px;
-    right: 0;
-    left: 500px;
-}
+
 
 /* .addStudentButton {
     background-color: #C7B8EA !important;
@@ -86,30 +68,18 @@
     background-position: top;
 } */
 
-.deleteB{
-    position: absolute;
-    top: 125px;
-    bottom: 200px;
-    right: 0;
-    left: 615px;
-}
-
-.backHome{
-    position: absolute;
-    top: 125px;
-    bottom: 200px;
-    right: 0;
-    left: 730px;
-}
 
 /* .buttom{
     float: left;
 } */
 
-#main-container{
+#main-conteiner{
+    width:100%;
+    display:flex;
     padding-top: 10px;
     text-align: justify;
     justify-content: center;
+
 }
 
 
