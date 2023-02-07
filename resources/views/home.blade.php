@@ -16,7 +16,7 @@
         <table class="table table-bordered border-primary">
             <thead>
                 <tr>
-                    <td rowspan="2">Nombre estudiantes</td>
+                    <td rowspan="2" class="align-middle">Nombre estudiantes</td>
                     <td colspan="4">Lengua</td>
                     <td colspan="4">Inglés</td>
                     <td colspan="4">Mates</td>
@@ -28,8 +28,33 @@
                     <td>2T</td>
                     <td>3T</td>
                     <td>F</td>
+
+                    <td>1T</td>
+                    <td>2T</td>
+                    <td>3T</td>
+                    <td>F</td>
+
+                    <td>1T</td>
+                    <td>2T</td>
+                    <td>3T</td>
+                    <td>F</td>
+
+                    <td>1T</td>
+                    <td>2T</td>
+                    <td>3T</td>
+                    <td>F</td>
+
+                    <td>1T</td>
+                    <td>2T</td>
+                    <td>3T</td>
+                    <td>F</td>
                 </tr>
             </thead>
+            <tbody>
+
+            </tbody>
+            
+            
             @foreach ($users as $user)
             <h3>RESULTADO FOREACH ALUMNO</h3>
             <div>
