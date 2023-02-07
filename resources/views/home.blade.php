@@ -57,15 +57,16 @@
                     <td>F</td>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> 
                 @foreach ($users as $user)
-                    <tr>
-                        <td> <div><a href="{{ route('showGrade', $user->id) }}"> {{ $user->name }} </a></div> </td>
+                    <tr> <!-- NOTA: poner if para que coja nombres usuarios solo -->
+                        <td scope="row"> <div><a href="{{ route('showUser', $user->id) }}"> {{ $user->name }} {{ $user->surname1 }} {{ $user->surname2 }} </a></div> </td>
                         @foreach ($grades as $grade)
                             <td> {{ $grade->grade }} </td>
                         @endforeach
                     </tr>
                 @endforeach
+            
             </tbody>
             
             
@@ -89,7 +90,7 @@
     </div>
 
 
-    <form action="{{ route('deleteGrade', ['id'=> $grade->id]) }}" method="post">
+    <form action="{{ route('deleteUser', ['id'=> $grade->id]) }}" method="post">
         @method('delete')
         @csrf 
             <button type="submit"

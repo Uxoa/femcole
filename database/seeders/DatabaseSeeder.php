@@ -68,6 +68,26 @@ class DatabaseSeeder extends Seeder
             'exam' => '1',
             'schoolYear' => '2023',
         ]);
+
+        User::factory()->create([
+            'name' => 'Ana',
+            'surname1' => 'Rueda',
+            'surname2'=> 'Guiu',
+            'email' => 'ana@gmail.com',
+            'password' => 'password',
+            'password_confirmation' => 'password',
+            'image' => 'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094623-stock-illustration-female-avatar-woman.jpg',
+            'isAdmin' => false,
+        ]);
+
+        Grade::factory()->create([
+            'user_id'=> '4',
+            'grade'=> '8',
+            'trimester' => '2T',
+            'subject' => 'Lengua',
+            'exam' => '1',
+            'schoolYear' => '2023',
+        ]);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',

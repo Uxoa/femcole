@@ -61,7 +61,7 @@ class GradeController extends Controller
         $user = User::find($id);
         $grade = Grade::find($id);
 
-        return view('showGrade', compact('user', 'grade'));
+        return view('showUser', compact('user', 'grade'));
     }
 
     /**
@@ -76,7 +76,7 @@ class GradeController extends Controller
         $user = User::find($id);
         $grade = Grade::find($id);
 
-        return view('editGrade', compact('user', 'grade'));
+        return view('editUser', compact('user', 'grade'));
     }
 
     /**
