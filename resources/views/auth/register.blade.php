@@ -102,9 +102,8 @@
                                     </button>
                                 </a>
 
-                                <button type="reset" value="reset" class="btnReset">
-                                    Reset
-                                    </button>
+                                <button type="reset" value="reset" class="btnReset">Reset
+                                    <a href="{{ route('register') }}"></a></button>
 
                                 <a href="{{ route('home') }}">
                                     <button type="button" class="btnBack">
