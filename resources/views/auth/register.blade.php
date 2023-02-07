@@ -94,26 +94,25 @@
                                 <input id="image" type="text" class="form-control" name="image">
                             </div>
                         </div>
-
-                        <div class="btnBox">
-                            
-                                <a href="{{ route ('home') }}">
+                        <div class="row mb-3">
+                            <div class="btnBox">
+                                <a href="{{ route('createUser') }}">
                                     <button type="submit" class="btnRegister" >
                                         {{ __('Register') }}
                                     </button>
                                 </a>
 
-                                <!-- <a href="{{ route ('home') }}">
+                                <a href="{{ route ('home') }}">
                                     <button type="reset" class="btnCancel">
                                         {{ __('Cancel') }}
                                     </button>
-                                </a> -->
+                                </a> 
                                 <a href="{{ route ('home') }}">
-                                    <button type="reset" class="btnCancel">
-                                    Cancel
+                                    <button type=" " class="btnCancel">
+                                    Back Home
                                     </button>
-                                </a>
-                            
+                                </a> 
+                            </div>
                         </div>
                     </form>
 

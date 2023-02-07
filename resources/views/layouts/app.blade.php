@@ -8,6 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    
+    <link rel="icon" href="{{ asset('img/icon.ico') }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,16 +20,20 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
     <link href="{{ asset('css/edit.css') }}" rel="stylesheet">
+    <link  href="{{ asset('css/show.css') }}" rel="stylesheet">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 </head>
 
 <body>
     <x-header> </x-header>
+    
         <main class="py-4">
             @yield('content')
         </main>
-    </div>
-    <x-footer> </x-footer>
+
+<x-footer> </x-footer>
 </body>
 </html>
+
+
