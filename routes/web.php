@@ -53,4 +53,14 @@ Route::get('/homeTeacher',[GradeController::class,'index'])->name('home');
 //D del CRUD
 Route::delete('/delete/{id}',[GradeController::class,'destroy'])->name('deleteGrade');
 
+//C del CRUD
+Route::get('/create', [GradeController::class, 'create'])->name('createGrade');
+Route::post('/', [GradeController::class, 'store'])->name('storeGrade');
+
+//U del CRUD
+Route::get('/edit/{id}', [GradeController::class, 'edit'])->name('editGrade');
+Route::patch('/grade/{id}', [GradeController::class, 'update'])->name('updateGrade');
+
+//Show
+Route::get('/show/{id}', [GradeController::class, 'show'])->name('showGrade');
 

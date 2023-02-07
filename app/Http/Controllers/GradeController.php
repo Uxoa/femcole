@@ -30,6 +30,7 @@ class GradeController extends Controller
     public function create()
     {
         //
+        return view ('createGrade');
     }
 
     /**
@@ -41,6 +42,11 @@ class GradeController extends Controller
     public function store(Request $request)
     {
         //
+        $grade = request()->except('_token');
+
+        Grade::create($grade);
+
+        return redirect()->route('home');
     }
 
     /**
@@ -52,6 +58,10 @@ class GradeController extends Controller
     public function show($id)
     {
         //
+        $user = User::find($id);
+        $grade = Grade::find($id);
+
+        return view('showGrade', compact('user', 'grade'));
     }
 
     /**
@@ -63,6 +73,10 @@ class GradeController extends Controller
     public function edit($id)
     {
         //
+        $user = User::find($id);
+        $grade = Grade::find($id);
+
+        return view('editGrade', compact('user', 'grade'));
     }
 
     /**
@@ -75,6 +89,11 @@ class GradeController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $grade = request()->except('_token', '_method');
+        
+        Grade::where('id', '=', $id)->update($grade);
+
+        return redirect()->route('home');
     }
 
     /**
