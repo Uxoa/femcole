@@ -90,10 +90,12 @@ a.input[type=password] {
 
 }
 
-.btnBox{
-display:flex;
-flex-direction: row;
-justify-content: center;
+.btnBox {
+    width:60%;
+    margin-left:20%; 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
 }
 
@@ -154,14 +156,14 @@ a.btnForgot:hover{
 
 }
 
-a button[type=reset].btnCancel{
+.btnReset{
     width:130px;
     border-radius: 13px;
     color:#ffffff;
     border:0;
     background: #FF9C64;
     font-size:13px;
-    padding:10px 0px 10px 5px;
+    padding:10px 10px 10px 5px;
     margin:0 0 0 100%;
     background-image: url("../img/backIcon.png");
     background-repeat: no-repeat;
@@ -170,8 +172,24 @@ a button[type=reset].btnCancel{
     background-size: 25px;
 
 }
+.btnBack{
+    width:130px;
+    border-radius: 13px;
+    color:#ffffff;
+    border:0;
+    background: #f66c1d;
+    font-size:13px;
+    padding:10px 0px 10px 5px;
+    margin:0 0 0 100%;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position:left;
+    background-position-x: 20px;;
+    background-size: 25px;
 
-a button[type=reset].btnCancel:hover{
+}
+
+a button[type=reset].btnReset:hover{
     background: #f66c1d;
     background-image: url("../img/backIcon.png");
     background-repeat: no-repeat;
