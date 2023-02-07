@@ -24,6 +24,13 @@
                     <td colspan="4">Geografía</td>
                 </tr>
                 <tr>
+                    <!-- NOTA: No me interesa hacer foreach aqui porque no tengo plantilla para que repita 1T-2T-3T... -->
+                    <!-- @foreach ($grades as $grade)
+                        <td> {{ $grade->trimester }} </td>
+                        <td> {{ $grade->trimester }} </td>
+                        <td> {{ $grade->trimester }} </td>
+                        <td> {{ $grade->trimester }} </td>
+                    @endforeach -->
                     <td>1T</td>
                     <td>2T</td>
                     <td>3T</td>
@@ -51,7 +58,14 @@
                 </tr>
             </thead>
             <tbody>
-
+                @foreach ($users as $user)
+                    <tr>
+                        <td> <div><a href="{{ route('showGrade', $user->id) }}"> {{ $user->name }} </a></div> </td>
+                        @foreach ($grades as $grade)
+                            <td> {{ $grade->grade }} </td>
+                        @endforeach
+                    </tr>
+                @endforeach
             </tbody>
             
             
