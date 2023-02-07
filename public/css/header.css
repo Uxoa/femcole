@@ -1,16 +1,38 @@
 header{
         display: flex;
-       
         height: 70px;
         width: 100%;
         background-color: #AEA0D0;
         padding: 30px;
+        justify-content: space-between;
+
     }
     .log {
         display: flex;
         align-items: center;
+        
     }
     .log img{
         height: 50px;
         margin-right: 10px  ;
+        
     }
+
+    .nav-item.dropdown{
+        border-radius:20%;
+        background: #fff;
+        border: 2px solid #6610f2;
+    }
+
+    .dropdown-menu.dropdown-menu-end{
+        border-radius: 13px;
+        color:#ffffff;
+        border:0;
+        background: #AEA0D0;
+        padding:10px 0px 10px 5px;
+        font-size:13px;
+        text-align: center;
+        border: 2px solid #6610f2;
+    }
+
+
