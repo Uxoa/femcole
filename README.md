@@ -94,15 +94,16 @@ To run the tests, execute the following command(s)
 ```bash
   php artisan test
 ```
-<img width="259" alt="Screenshot test" src="">
+<img width="393" alt="test_artisan_mvp" src="https://user-images.githubusercontent.com/98114939/217561019-46b00e8c-8c80-485f-99e9-6fe09010162e.png">
 
 ```bash
   vendor/bin/phpunit tests
 ```
 
-<img width="370" alt="Screenshot test" src="">
+<img width="449" alt="test_vendor_mvp" src="https://user-images.githubusercontent.com/98114939/217561187-eb99f8d3-c9df-4da9-8167-0efd9e556139.png">
 
 ***
+
 
 ## Methodology
 - TDD
