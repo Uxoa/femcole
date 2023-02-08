@@ -4,18 +4,20 @@
 
 <div class="studentCard">
       
-            <img src="{{$user->image}}" alt="adriana" class="imageStudent">
+           {{--  <img src="{{$user->image}}" alt="adriana" class="imageStudent"> 
         
         <div class="infoStudent">
             <p>Nombre y Apellidos: {{$user->name}} {{$user->surname1}} {{$user->surname2}}</p>
             <p>Curso: </p>
             <p>E-mail: {{$user->email}}</p>
         </div>
-</div>
+</div>--}}
     
 <div class="allT">
     
-
+<form method="POST" action="{{route('updateGrade', $grade -> id)}}" class="studentGrade">
+    @method('PATCH')
+    @csrf
         <table class="firstT box tableHome table-striped text-center">
             
             <thead class="tableHead">
@@ -36,16 +38,16 @@
             <tbody>
                 <tr>
                     <td>Lengua</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><input type="text" id="l11" name="l11" value="4"></td>
+                    <td><input type="text" id="l12" name="l12" value="8"></td>
+                    <td><input type="text" id="l13" name="l13" value="9"></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Inglés</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><input type="text" id="i11" name="i11" value="7"></td>
+                    <td><input type="text" id="i12" name="i12" value="5"></td>
+                    <td><input type="text" id="i13" name="i13" value="6"></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -175,7 +177,8 @@
                         <td></td>
                     </tr>
                 </tbody>
-
+            </table>
+</form>    
 
             <table class="finalEvaluation box tableHome table-striped text-center">
                 
@@ -216,7 +219,7 @@
                 </form>
                 
                 <a href="{{route ('home') }}" class="btnA btn-purpleA backHome">Back</a>
-        </div> 
+            </div> 
         
     
     @endif
