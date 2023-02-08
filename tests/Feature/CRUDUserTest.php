@@ -97,7 +97,7 @@ class CRUDUserTest extends TestCase
         $this->assertCount(1,User::all());
 
         $userAdmin = User::factory()->create(['isAdmin' => true]);
-        $this->actingAs($userAdmin);
+        $this->actingAs($userAdmin); 
         $response = $this->patch(route('updateUser', $user->id), ['name' => 'New Name']);
         $this->assertEquals('New Name', User::first()->name);
 
