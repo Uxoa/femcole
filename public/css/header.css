@@ -21,18 +21,17 @@ header{
     .nav-item.dropdown{
         border-radius:20%;
         background: #fff;
-        border: 2px solid #6610f2;
+        border: 2px solid #845fbe;
     }
 
     .dropdown-menu.dropdown-menu-end{
         border-radius: 13px;
-        color:#ffffff;
-        border:0;
-        background: #AEA0D0;
+        background: #C7B8EA;
         padding:10px 0px 10px 5px;
-        font-size:13px;
         text-align: center;
-        border: 2px solid #6610f2;
+        border: 2px solid #845fbe;
     }
-
+    a.dropdown-item{
+        background: #C7B8EA;
+    }
 
