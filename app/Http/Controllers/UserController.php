@@ -27,8 +27,8 @@ class UserController extends Controller
 
     public function index()
     {
+        $users = User::where('isAdmin','=', false)->get();
         
-        $users = User::get();
        /*  var_dump($users); */
         return view('home', compact('users'));
 
