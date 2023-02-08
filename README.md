@@ -31,9 +31,36 @@ In addition, students can consult their grades and get information about their a
 
 ## Screenshots
 
+<h3 align="center">Sketchs views teacher</h3>
+<p align="center"> 
+    <img src="https://user-images.githubusercontent.com/98114939/217632256-e1b735ec-3d83-4c71-86c7-52eb53c6bb73.png" alt="Sketch Login View Desktop Teacher" width="200px">
+    <img src="https://user-images.githubusercontent.com/98114939/217632093-c914833c-e5b9-491d-b155-a48b82ff4bb2.png" alt="Sketch Homepage View Desktop Teacher" width="200px">
+</p>
 
+<h3 align="center">Sketchs views student</h3>
+<p align="center"> 
+    <img src="https://user-images.githubusercontent.com/98114939/217632154-1fef6e87-c225-469c-8213-d1b4aecb8aa5.png" alt="Sketch Login View Mobile Student" width="50px">
+    <img src="https://user-images.githubusercontent.com/98114939/217632345-8b13038e-8d91-4f93-b156-076f2d73b92b.png" alt="Sketch Show View Desktop Student" width="200px">
+    <img src="https://user-images.githubusercontent.com/98114939/217632408-ef9a9d49-481a-4828-b7de-0db234e27039.png" alt="Sketch Show View Mobile Student" width="50px">
+</p>
+
+<h3 align="center">Mockups views teacher</h3>
+<p align="center"> 
+    <img src="https://user-images.githubusercontent.com/98114939/217637218-0df9d931-95e5-4edc-b3b7-a561d4a20158.png" alt="Mockup Login View Desktop Teacher" width="200px">
+    <img src="https://user-images.githubusercontent.com/98114939/217638588-4f64088b-63be-4575-8548-e540f1d34f50.png" alt="Mockup Login View Desktop Teacher" width="200px">
+    <img src="https://user-images.githubusercontent.com/98114939/217637211-a70ce3a5-aaab-4df7-8e4c-05f5e5a3e28d.png" alt="Mockup Register Student View Desktop Teacher" width="200px">
+    <img src="https://user-images.githubusercontent.com/98114939/217637213-12b398d8-9dd1-4f84-8da7-b0cd6476e521.png" alt="Mockup Edit View Desktop Teacher" width="200px">
+    <img src="https://user-images.githubusercontent.com/98114939/217637220-ff6719e7-b1dc-403d-8f2c-1aa39930de88.png" alt="Mockup Show View Desktop Teacher" width="200px">
+</p>
+
+<h3 align="center">Mockups views student</h3>
+<p align="center"> 
+    <img src="https://user-images.githubusercontent.com/98114939/217639169-1509eb6b-8789-4b5a-ae25-07f874117693.png" alt="Mockup Show View Mobile Student" width="50px">
+    <img src="https://user-images.githubusercontent.com/98114939/217639210-16d84fe8-1e43-4d9b-bd51-41a3ab13a23b.png" alt="Mockup Show View Mobile Student" width="50px">
+</p>
 
 ***
+
 
 ## Stacks
 
