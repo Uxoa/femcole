@@ -140,8 +140,8 @@ To run the tests, execute the following command(s)
 
 ## Next Steps
 
--Completing the CRUD of the grades
--Add functionalities (quarter end, calculation of average grades, ...)
--Profiling the design with CSS
--Configure all the views
--Add Drag and Drop for student photos
+- Completing the CRUD of the grades
+- Add functionalities (quarter end, calculation of average grades, ...)
+- Profiling the design with CSS
+- Configure all the views
+- Add Drag and Drop for student photos
