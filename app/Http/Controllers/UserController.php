@@ -29,7 +29,7 @@ class UserController extends Controller
     {
         $users = User::where('isAdmin','=', false)->get();
         
-       /*  var_dump($users); */
+        $users = User::where('isAdmin','=', false)->get();
         return view('home', compact('users'));
 
         

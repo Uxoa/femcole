@@ -18,7 +18,7 @@ class CRUDUserTest extends TestCase
      */
     use RefreshDatabase;
 
-    public function test_listUserAppearInHomeViewByAdmin(){
+    public function test_listUserAppearInHomeViewForAdminAndNotForUser(){
         $this->withExceptionHandling();
 
         $users = User::factory(2)->create();
@@ -39,7 +39,7 @@ class CRUDUserTest extends TestCase
                 ->assertViewIs('home');
     }
 
-    public function test_anUserCanBeDeletedByAdmin(){
+    public function test_anUserCanBeDeletedByAdminAndCannotBeDeletedByAnUser(){
         $this->withExceptionHandling();
 
         $user = User::factory()->create();
@@ -56,7 +56,7 @@ class CRUDUserTest extends TestCase
         $this->assertCount(2,User::all());
     }
 
-    public function test_anUserCanBeCreatedByAdmin(){
+    public function test_anUserCanBeCreatedByAdminAndCannotBeCreatedByAnUser(){
         $this->withExceptionHandling();
 
         $userAdmin = User::factory()->create(['isAdmin'=>true]);
@@ -90,14 +90,14 @@ class CRUDUserTest extends TestCase
         $this->assertCount(3, User::all());
     }
 
-    public function test_anUserCanBeUpdatedByAdmin(){
+    public function test_anUserCanBeUpdatedByAdminAndCannotBeUpdatedByAnUser(){
         $this->withExceptionHandling();
         
         $user = User::factory()->create();
         $this->assertCount(1,User::all());
 
         $userAdmin = User::factory()->create(['isAdmin' => true]);
-        $this->actingAs($userAdmin);
+        $this->actingAs($userAdmin); 
         $response = $this->patch(route('updateUser', $user->id), ['name' => 'New Name']);
         $this->assertEquals('New Name', User::first()->name);
 
